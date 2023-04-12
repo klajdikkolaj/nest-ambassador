@@ -1,4 +1,6 @@
-export class ProductDto {
-  email: string;
-  password: string;
+export class ProductCreateDto {
+  title?: string;
+  description?: string;
+  image?: string;
+  price?: string;
 }
