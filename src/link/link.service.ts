@@ -1,15 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import { AbstractService } from '../shared/abstract.service';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Order } from './order';
+import { Link } from './link';
 import { Repository } from 'typeorm';
 
 @Injectable()
-export class OrderService extends AbstractService {
+export class LinkService extends AbstractService {
   constructor(
-    @InjectRepository(Order)
-    private readonly orderRepository: Repository<Order>,
+    @InjectRepository(Link) private readonly linkRepository: Repository<Link>,
   ) {
-    super(orderRepository);
+    super(linkRepository);
   }
 }
